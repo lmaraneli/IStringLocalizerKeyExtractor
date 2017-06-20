@@ -52,7 +52,7 @@ namespace Core
         private async Task GetAllFileNames()
         {
             DirectoryInfo d = new DirectoryInfo(Path);
-            FileInfo[] files = d.GetFiles("*.cs").Concat(d.GetFiles(".cshtml")).ToArray();
+            FileInfo[] files = d.GetFiles("*.cs").Concat(d.GetFiles("*.cshtml")).ToArray();
             foreach (var f in files)
             {
                 FileNames.Add(f.FullName);
