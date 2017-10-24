@@ -66,7 +66,7 @@ namespace Core
 
         private void GetFileNamesWithinDirectory(DirectoryInfo d)
         {
-            FileInfo[] files = d.GetFiles("*.cs");
+            FileInfo[] files = d.GetFiles("*.cs").Concat(d.GetFiles("*.cshtml")).ToArray(); ;
             foreach (var f in files)
             {
                 FileNames.Add(f.FullName);

@@ -51,7 +51,7 @@ namespace IStringLocalizerKeyExtractorWinForm
         {
             if (string.IsNullOrEmpty(Variables.Text)) return;
 
-            var v = Variables.Text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var v = Variables.Text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             var main = new Main(MainPath.Text, ResourcePath.Text, SaveLocation.Text, v);
             var value = main.ProcessFiles();
