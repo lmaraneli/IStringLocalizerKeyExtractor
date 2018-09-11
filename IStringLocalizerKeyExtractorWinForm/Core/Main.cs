@@ -17,10 +17,10 @@ namespace Core
         List<string> FileNames = new List<string>();
         List<string> ResouceFileNames = new List<string>();
 
-        public Main(string path, string resourcePath, string saveLOcation, params string[] variables)
+        public Main(string path, string resourcePath, string saveLocation, params string[] variables)
         {
             this.Path = path; this.ResourcePath = resourcePath; Variables = variables;
-            SaveLocation = saveLOcation;
+            SaveLocation = saveLocation;
         }
 
         public int ProcessFiles()

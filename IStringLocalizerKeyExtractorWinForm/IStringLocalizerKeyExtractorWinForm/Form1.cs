@@ -19,7 +19,7 @@ namespace IStringLocalizerKeyExtractorWinForm
         {
             InitializeComponent();
 
-            ResourcePath.Enabled = false;
+            ResourcePath.Enabled = true;
             SaveLocation.Enabled = false;
         }
 

@@ -36,7 +36,7 @@ namespace Core
             Task.WaitAll(tasks.ToArray());
 
             var lst = new List<string>();
-            Keys.ForEach(x => lst = lst.Concat(x).ToList());
+            Keys.ForEach(x => lst = lst.Concat(x ?? new List<string>()).ToList());
 
             return lst.Distinct().ToList();
         }
@@ -50,7 +50,7 @@ namespace Core
                 var regex = new Regex(v + "\\[\"(.*)\"\\]");
                 var coll = regex.Matches(file);
                 for (var i = 0; i < coll.Count; i++)
-                        list.Add(coll[i].Groups[1].Value);
+                    list.Add(coll[i].Groups[1].Value);
             }
 
             object obj = new object();
